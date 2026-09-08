@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Split restaurant bills from a photograph. Proportional GST, service charge, and item-level sharing.">
+    <title>{% block title %}Split The Bill{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="page-wrapper">
+
+    <header>
+        <a href="{{ url_for('index') }}" class="logo">
+            <div class="logo-icon">🧾</div>
+            <span class="logo-text">SplitBill</span>
+        </a>
+        <span style="color:var(--text-3);font-size:.8rem;">From photograph to fair split</span>
+    </header>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flash-list" style="margin-top:16px;">
+            {% for msg in messages %}
+            <li class="flash-item">{{ msg }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

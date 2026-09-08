@@ -1,0 +1,858 @@
+[
+  {
+    "id": "royal_biryani",
+    "title": "Royal Biryani House",
+    "category": "Indian & Mughlai",
+    "icon": "\ud83c\udf5b",
+    "description": "Authentic Dum Biryani with Mutton Korma and Garlic Naan",
+    "image_file": "01_royal_biryani.jpg",
+    "currency": "\u20b9",
+    "bill": {
+      "items": [
+        {
+          "name": "Chicken Biryani",
+          "quantity": 2,
+          "unit_price": 380.0,
+          "line_total": 760.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Mutton Korma",
+          "quantity": 1,
+          "unit_price": 450.0,
+          "line_total": 450.0,
+          "confidence": 0.95
+        },
+        {
+          "name": "Garlic Naan",
+          "quantity": 4,
+          "unit_price": 70.0,
+          "line_total": 280.0,
+          "confidence": 0.99
+        },
+        {
+          "name": "Coke (250ml)",
+          "quantity": 3,
+          "unit_price": 45.0,
+          "line_total": 135.0,
+          "confidence": 0.96
+        }
+      ],
+      "subtotal": 1625.0,
+      "subtotal_confidence": 0.98,
+      "discount": 0.0,
+      "discount_confidence": 1.0,
+      "tax": 81.26,
+      "tax_confidence": 0.95,
+      "service_charge": 162.5,
+      "service_charge_confidence": 0.92,
+      "printed_total": 1869.0,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "bella_italia",
+    "title": "Bella Italia Pizzeria",
+    "category": "Italian & Pizza",
+    "icon": "\ud83c\udf55",
+    "description": "Woodfired Margherita, Truffle Pasta, and Tiramisu",
+    "image_file": "02_bella_italia.jpg",
+    "currency": "\u00a3",
+    "bill": {
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "quantity": 1,
+          "unit_price": 14.95,
+          "line_total": 14.95,
+          "confidence": 0.97
+        },
+        {
+          "name": "Truffle Pasta",
+          "quantity": 1,
+          "unit_price": 18.5,
+          "line_total": 18.5,
+          "confidence": 0.95
+        },
+        {
+          "name": "Garlic Bread w/ Cheese",
+          "quantity": 1,
+          "unit_price": 6.2,
+          "line_total": 6.2,
+          "confidence": 0.98
+        },
+        {
+          "name": "Tiramisu",
+          "quantity": 1,
+          "unit_price": 7.8,
+          "line_total": 7.8,
+          "confidence": 0.94
+        },
+        {
+          "name": "Sparkling Water (S.Pel)",
+          "quantity": 2,
+          "unit_price": 3.3,
+          "line_total": 6.6,
+          "confidence": 0.96
+        }
+      ],
+      "subtotal": 54.05,
+      "subtotal_confidence": 0.98,
+      "discount": 0.0,
+      "discount_confidence": 1.0,
+      "tax": 10.81,
+      "tax_confidence": 0.94,
+      "service_charge": 6.76,
+      "service_charge_confidence": 0.92,
+      "printed_total": 71.62,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "blue_tokai",
+    "title": "Blue Tokai Artisan Cafe",
+    "category": "Cafe & Bakery",
+    "icon": "\u2615",
+    "description": "Artisan Flat White, Avocado Toast, and Almond Croissants",
+    "image_file": "03_blue_tokai.jpg",
+    "currency": "\u20b9",
+    "bill": {
+      "items": [
+        {
+          "name": "Flat White",
+          "quantity": 1,
+          "unit_price": 280.0,
+          "line_total": 280.0,
+          "confidence": 0.99
+        },
+        {
+          "name": "Iced Caramel Latte",
+          "quantity": 1,
+          "unit_price": 310.0,
+          "line_total": 310.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Almond Croissant",
+          "quantity": 1,
+          "unit_price": 220.0,
+          "line_total": 220.0,
+          "confidence": 0.97
+        },
+        {
+          "name": "Avocado Sourdough Toast",
+          "quantity": 1,
+          "unit_price": 480.0,
+          "line_total": 480.0,
+          "confidence": 0.96
+        },
+        {
+          "name": "Blueberry Muffin",
+          "quantity": 1,
+          "unit_price": 190.0,
+          "line_total": 190.0,
+          "confidence": 0.97
+        }
+      ],
+      "subtotal": 1480.0,
+      "subtotal_confidence": 0.99,
+      "discount": 0.0,
+      "discount_confidence": 1.0,
+      "tax": 74.0,
+      "tax_confidence": 0.96,
+      "service_charge": 0.0,
+      "service_charge_confidence": 1.0,
+      "printed_total": 1554.0,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "smash_burger",
+    "title": "Smash Burger Shack",
+    "category": "Burgers & Fast Casual",
+    "icon": "\ud83c\udf54",
+    "description": "Double Cheeseburger with Truffle Parm Fries & Shake",
+    "image_file": "04_smash_burger.jpg",
+    "currency": "$",
+    "bill": {
+      "items": [
+        {
+          "name": "Double Cheeseburger",
+          "quantity": 1,
+          "unit_price": 14.99,
+          "line_total": 14.99,
+          "confidence": 0.98
+        },
+        {
+          "name": "Crispy Chicken Burger",
+          "quantity": 1,
+          "unit_price": 13.5,
+          "line_total": 13.5,
+          "confidence": 0.97
+        },
+        {
+          "name": "Truffle Parm Fries",
+          "quantity": 1,
+          "unit_price": 6.75,
+          "line_total": 6.75,
+          "confidence": 0.96
+        },
+        {
+          "name": "Onion Rings",
+          "quantity": 1,
+          "unit_price": 5.5,
+          "line_total": 5.5,
+          "confidence": 0.98
+        },
+        {
+          "name": "Chocolate Shake",
+          "quantity": 1,
+          "unit_price": 6.95,
+          "line_total": 6.95,
+          "confidence": 0.97
+        }
+      ],
+      "subtotal": 47.69,
+      "subtotal_confidence": 0.99,
+      "discount": 0.0,
+      "discount_confidence": 1.0,
+      "tax": 4.23,
+      "tax_confidence": 0.95,
+      "service_charge": 0.0,
+      "service_charge_confidence": 1.0,
+      "printed_total": 51.92,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "tokyo_sushi",
+    "title": "Tokyo Sushi Bar",
+    "category": "Japanese & Sushi",
+    "icon": "\ud83c\udf63",
+    "description": "Fresh Salmon Sashimi, Dragon Roll, Edamame, and Miso",
+    "image_file": "05_tokyo_sushi.jpg",
+    "currency": "\u00a5",
+    "bill": {
+      "items": [
+        {
+          "name": "Salmon Sashimi (5 pcs)",
+          "quantity": 1,
+          "unit_price": 1800.0,
+          "line_total": 1800.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Spicy Tuna Roll (8 pcs)",
+          "quantity": 1,
+          "unit_price": 1400.0,
+          "line_total": 1400.0,
+          "confidence": 0.97
+        },
+        {
+          "name": "Dragon Roll (8 pcs)",
+          "quantity": 1,
+          "unit_price": 2200.0,
+          "line_total": 2200.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Edamame (Salted)",
+          "quantity": 1,
+          "unit_price": 600.0,
+          "line_total": 600.0,
+          "confidence": 0.99
+        },
+        {
+          "name": "Miso Soup",
+          "quantity": 2,
+          "unit_price": 400.0,
+          "line_total": 800.0,
+          "confidence": 0.96
+        },
+        {
+          "name": "Japanese Green Tea (Hot)",
+          "quantity": 2,
+          "unit_price": 500.0,
+          "line_total": 1000.0,
+          "confidence": 0.97
+        }
+      ],
+      "subtotal": 7800.0,
+      "subtotal_confidence": 0.99,
+      "discount": 0.0,
+      "discount_confidence": 1.0,
+      "tax": 780.0,
+      "tax_confidence": 0.95,
+      "service_charge": 780.0,
+      "service_charge_confidence": 0.94,
+      "printed_total": 9360.0,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "taqueria_fiesta",
+    "title": "Taqueria La Fiesta",
+    "category": "Mexican Street Food",
+    "icon": "\ud83c\udf2e",
+    "description": "Beef Birria Tacos, Pollo Asado, Chips & Guacamole",
+    "image_file": "06_taqueria_fiesta.jpg",
+    "currency": "$",
+    "bill": {
+      "items": [
+        {
+          "name": "Chips & Guacamole",
+          "quantity": 1,
+          "unit_price": 7.95,
+          "line_total": 7.95,
+          "confidence": 0.99
+        },
+        {
+          "name": "Beef Birria Tacos (3x)",
+          "quantity": 2,
+          "unit_price": 15.95,
+          "line_total": 31.9,
+          "confidence": 0.96
+        },
+        {
+          "name": "Pollo Asado Taco (3x)",
+          "quantity": 1,
+          "unit_price": 13.95,
+          "line_total": 13.95,
+          "confidence": 0.98
+        },
+        {
+          "name": "Horchata",
+          "quantity": 1,
+          "unit_price": 4.5,
+          "line_total": 4.5,
+          "confidence": 0.97
+        },
+        {
+          "name": "Churros",
+          "quantity": 1,
+          "unit_price": 6.0,
+          "line_total": 6.0,
+          "confidence": 0.96
+        }
+      ],
+      "subtotal": 64.3,
+      "subtotal_confidence": 0.99,
+      "discount": 0.0,
+      "discount_confidence": 1.0,
+      "tax": 5.43,
+      "tax_confidence": 0.95,
+      "service_charge": 0.0,
+      "service_charge_confidence": 1.0,
+      "printed_total": 69.73,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "punjabi_dhaba",
+    "title": "Grand Punjabi Dhaba",
+    "category": "North Indian Feast",
+    "icon": "\ud83e\udd58",
+    "description": "Paneer Butter Masala, Dal Makhani, Garlic Naans & Sweet Lassi",
+    "image_file": "07_punjabi_dhaba.svg",
+    "currency": "\u20b9",
+    "bill": {
+      "items": [
+        {
+          "name": "Paneer Butter Masala",
+          "quantity": 1,
+          "unit_price": 380.0,
+          "line_total": 380.0,
+          "confidence": 0.97
+        },
+        {
+          "name": "Dal Makhani",
+          "quantity": 1,
+          "unit_price": 340.0,
+          "line_total": 340.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Butter Garlic Naan",
+          "quantity": 4,
+          "unit_price": 75.0,
+          "line_total": 300.0,
+          "confidence": 0.99
+        },
+        {
+          "name": "Jeera Rice",
+          "quantity": 1,
+          "unit_price": 220.0,
+          "line_total": 220.0,
+          "confidence": 0.96
+        },
+        {
+          "name": "Special Sweet Lassi",
+          "quantity": 3,
+          "unit_price": 110.0,
+          "line_total": 330.0,
+          "confidence": 0.95
+        },
+        {
+          "name": "Gulab Jamun (2 pcs)",
+          "quantity": 2,
+          "unit_price": 90.0,
+          "line_total": 180.0,
+          "confidence": 0.97
+        }
+      ],
+      "subtotal": 1750.0,
+      "subtotal_confidence": 0.98,
+      "discount": 0.0,
+      "discount_confidence": 1.0,
+      "tax": 87.5,
+      "tax_confidence": 0.95,
+      "service_charge": 87.5,
+      "service_charge_confidence": 0.93,
+      "printed_total": 1925.0,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "rooftop_lounge",
+    "title": "Skyline Rooftop Lounge",
+    "category": "Bar & Lounge",
+    "icon": "\ud83c\udf78",
+    "description": "Craft Cocktails, Loaded Nachos, BBQ Wings & Craft Beer",
+    "image_file": "08_rooftop_lounge.svg",
+    "currency": "\u20b9",
+    "bill": {
+      "items": [
+        {
+          "name": "Classic Mint Mojito",
+          "quantity": 2,
+          "unit_price": 450.0,
+          "line_total": 900.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Craft Wheat Beer Pitcher",
+          "quantity": 1,
+          "unit_price": 1200.0,
+          "line_total": 1200.0,
+          "confidence": 0.97
+        },
+        {
+          "name": "Loaded Nachos Supreme",
+          "quantity": 1,
+          "unit_price": 520.0,
+          "line_total": 520.0,
+          "confidence": 0.96
+        },
+        {
+          "name": "Peri Peri Chicken Wings",
+          "quantity": 1,
+          "unit_price": 480.0,
+          "line_total": 480.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Truffle Fries Basket",
+          "quantity": 1,
+          "unit_price": 350.0,
+          "line_total": 350.0,
+          "confidence": 0.95
+        }
+      ],
+      "subtotal": 3450.0,
+      "subtotal_confidence": 0.99,
+      "discount": 200.0,
+      "discount_confidence": 0.98,
+      "tax": 325.0,
+      "tax_confidence": 0.95,
+      "service_charge": 345.0,
+      "service_charge_confidence": 0.92,
+      "printed_total": 3920.0,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "green_garden",
+    "title": "Green Garden Organic Cafe",
+    "category": "Healthy & Brunch",
+    "icon": "\ud83e\udd57",
+    "description": "Acai Bowl, Eggs Benedict, Cold Pressed Juices & Sourdough",
+    "image_file": "09_green_garden.svg",
+    "currency": "\u20b9",
+    "bill": {
+      "items": [
+        {
+          "name": "Truffle Eggs Benedict",
+          "quantity": 1,
+          "unit_price": 490.0,
+          "line_total": 490.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Tropical Acai Superbowl",
+          "quantity": 1,
+          "unit_price": 420.0,
+          "line_total": 420.0,
+          "confidence": 0.97
+        },
+        {
+          "name": "Cold-Pressed Green Glow Juice",
+          "quantity": 2,
+          "unit_price": 240.0,
+          "line_total": 480.0,
+          "confidence": 0.96
+        },
+        {
+          "name": "Warm Banana Walnut Bread",
+          "quantity": 1,
+          "unit_price": 210.0,
+          "line_total": 210.0,
+          "confidence": 0.99
+        }
+      ],
+      "subtotal": 1600.0,
+      "subtotal_confidence": 0.99,
+      "discount": 80.0,
+      "discount_confidence": 0.99,
+      "tax": 76.0,
+      "tax_confidence": 0.95,
+      "service_charge": 0.0,
+      "service_charge_confidence": 1.0,
+      "printed_total": 1596.0,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "smokehouse_bbq",
+    "title": "Texas Smokehouse BBQ",
+    "category": "BBQ & Steaks",
+    "icon": "\ud83e\udd69",
+    "description": "Slow-smoked Beef Brisket, Pulled Pork & Creamy Mac & Cheese",
+    "image_file": "10_smokehouse_bbq.svg",
+    "currency": "$",
+    "bill": {
+      "items": [
+        {
+          "name": "Smoked Beef Brisket (1/2 lb)",
+          "quantity": 2,
+          "unit_price": 21.5,
+          "line_total": 43.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Pulled Pork Sandwich",
+          "quantity": 1,
+          "unit_price": 14.5,
+          "line_total": 14.5,
+          "confidence": 0.97
+        },
+        {
+          "name": "Four-Cheese Mac & Cheese",
+          "quantity": 1,
+          "unit_price": 8.0,
+          "line_total": 8.0,
+          "confidence": 0.99
+        },
+        {
+          "name": "Buttermilk Cornbread (2x)",
+          "quantity": 1,
+          "unit_price": 5.5,
+          "line_total": 5.5,
+          "confidence": 0.96
+        },
+        {
+          "name": "Southern Sweet Iced Tea",
+          "quantity": 2,
+          "unit_price": 3.5,
+          "line_total": 7.0,
+          "confidence": 0.97
+        }
+      ],
+      "subtotal": 78.0,
+      "subtotal_confidence": 0.99,
+      "discount": 0.0,
+      "discount_confidence": 1.0,
+      "tax": 6.83,
+      "tax_confidence": 0.95,
+      "service_charge": 14.04,
+      "service_charge_confidence": 0.92,
+      "printed_total": 98.87,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "coastal_catch",
+    "title": "Ocean Breeze Coastal Seafood",
+    "category": "Seafood Grill",
+    "icon": "\ud83e\udd9e",
+    "description": "Butter Garlic Prawns, Grilled Sea Bass & Coconut Rice",
+    "image_file": "11_coastal_catch.svg",
+    "currency": "\u20b9",
+    "bill": {
+      "items": [
+        {
+          "name": "Butter Garlic Jumbo Prawns",
+          "quantity": 1,
+          "unit_price": 750.0,
+          "line_total": 750.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Grilled Lemon Butter Sea Bass",
+          "quantity": 1,
+          "unit_price": 850.0,
+          "line_total": 850.0,
+          "confidence": 0.97
+        },
+        {
+          "name": "Crispy Calamari Rings",
+          "quantity": 1,
+          "unit_price": 420.0,
+          "line_total": 420.0,
+          "confidence": 0.96
+        },
+        {
+          "name": "Steamed Fragrant Rice",
+          "quantity": 2,
+          "unit_price": 160.0,
+          "line_total": 320.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Fresh Lime Mint Cooler",
+          "quantity": 2,
+          "unit_price": 140.0,
+          "line_total": 280.0,
+          "confidence": 0.97
+        }
+      ],
+      "subtotal": 2620.0,
+      "subtotal_confidence": 0.99,
+      "discount": 0.0,
+      "discount_confidence": 1.0,
+      "tax": 131.0,
+      "tax_confidence": 0.96,
+      "service_charge": 180.0,
+      "service_charge_confidence": 0.93,
+      "printed_total": 2931.0,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "sweet_tooth",
+    "title": "Sweet Tooth Waffle & Gelato",
+    "category": "Desserts & Bakery",
+    "icon": "\ud83c\udf70",
+    "description": "Nutella Belgian Waffle, Molten Lava Cake & Gelato Scoops",
+    "image_file": "12_sweet_tooth.svg",
+    "currency": "\u20b9",
+    "bill": {
+      "items": [
+        {
+          "name": "Nutella Strawberries Belgian Waffle",
+          "quantity": 1,
+          "unit_price": 360.0,
+          "line_total": 360.0,
+          "confidence": 0.99
+        },
+        {
+          "name": "Dark Chocolate Molten Lava Cake",
+          "quantity": 1,
+          "unit_price": 290.0,
+          "line_total": 290.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Pistachio & Mango Gelato Duo",
+          "quantity": 2,
+          "unit_price": 180.0,
+          "line_total": 360.0,
+          "confidence": 0.97
+        },
+        {
+          "name": "Gourmet Hot Chocolate w/ Marshmallows",
+          "quantity": 1,
+          "unit_price": 240.0,
+          "line_total": 240.0,
+          "confidence": 0.98
+        }
+      ],
+      "subtotal": 1250.0,
+      "subtotal_confidence": 0.99,
+      "discount": 100.0,
+      "discount_confidence": 0.98,
+      "tax": 57.5,
+      "tax_confidence": 0.95,
+      "service_charge": 0.0,
+      "service_charge_confidence": 1.0,
+      "printed_total": 1207.5,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "dim_sum_house",
+    "title": "Golden Lotus Dim Sum House",
+    "category": "Asian & Dim Sum",
+    "icon": "\ud83e\udd5f",
+    "description": "Crystal Prawn Dumplings, Siu Mai, BBQ Pork Buns & Jasmine Tea",
+    "image_file": "13_dim_sum_house.svg",
+    "currency": "$",
+    "bill": {
+      "items": [
+        {
+          "name": "Har Gow (Crystal Shrimp Dumpling)",
+          "quantity": 2,
+          "unit_price": 8.5,
+          "line_total": 17.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Chicken Siu Mai (4 pcs)",
+          "quantity": 1,
+          "unit_price": 7.5,
+          "line_total": 7.5,
+          "confidence": 0.97
+        },
+        {
+          "name": "Steamed BBQ Pork Buns (3 pcs)",
+          "quantity": 1,
+          "unit_price": 7.0,
+          "line_total": 7.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Wok Crispy Veg Spring Rolls",
+          "quantity": 1,
+          "unit_price": 6.5,
+          "line_total": 6.5,
+          "confidence": 0.96
+        },
+        {
+          "name": "Imperial Jasmine Hot Tea Pot",
+          "quantity": 1,
+          "unit_price": 5.0,
+          "line_total": 5.0,
+          "confidence": 0.99
+        }
+      ],
+      "subtotal": 43.0,
+      "subtotal_confidence": 0.99,
+      "discount": 0.0,
+      "discount_confidence": 1.0,
+      "tax": 3.76,
+      "tax_confidence": 0.96,
+      "service_charge": 4.3,
+      "service_charge_confidence": 0.93,
+      "printed_total": 51.06,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "sports_bar",
+    "title": "The Dugout Sports Lounge",
+    "category": "Pub & Finger Food",
+    "icon": "\ud83c\udf7b",
+    "description": "Beer Pitcher, Loaded Buffalo Wings & Cheesy Fries",
+    "image_file": "14_sports_bar.svg",
+    "currency": "\u20b9",
+    "bill": {
+      "items": [
+        {
+          "name": "Premium Lager Beer Pitcher (1.5L)",
+          "quantity": 1,
+          "unit_price": 1150.0,
+          "line_total": 1150.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Buffalo Glazed Wings (12 pcs)",
+          "quantity": 1,
+          "unit_price": 540.0,
+          "line_total": 540.0,
+          "confidence": 0.97
+        },
+        {
+          "name": "Cheesy Bacon Loaded Fries",
+          "quantity": 1,
+          "unit_price": 380.0,
+          "line_total": 380.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Crispy Mozzarella Sticks",
+          "quantity": 1,
+          "unit_price": 320.0,
+          "line_total": 320.0,
+          "confidence": 0.96
+        },
+        {
+          "name": "Red Bull Energy Drink",
+          "quantity": 2,
+          "unit_price": 180.0,
+          "line_total": 360.0,
+          "confidence": 0.97
+        }
+      ],
+      "subtotal": 2750.0,
+      "subtotal_confidence": 0.99,
+      "discount": 0.0,
+      "discount_confidence": 1.0,
+      "tax": 275.0,
+      "tax_confidence": 0.95,
+      "service_charge": 200.0,
+      "service_charge_confidence": 0.92,
+      "printed_total": 3225.0,
+      "printed_total_confidence": 0.99
+    }
+  },
+  {
+    "id": "south_indian_tiffin",
+    "title": "Sri Krishna Bhavan Tiffin",
+    "category": "South Indian Veg",
+    "icon": "\ud83e\udd5e",
+    "description": "Ghee Roast Masala Dosa, Idli Vada Combo & Filter Coffee",
+    "image_file": "15_south_indian_tiffin.svg",
+    "currency": "\u20b9",
+    "bill": {
+      "items": [
+        {
+          "name": "Special Ghee Masala Dosa",
+          "quantity": 2,
+          "unit_price": 140.0,
+          "line_total": 280.0,
+          "confidence": 0.99
+        },
+        {
+          "name": "Steamed Idli (2) & Medu Vada (1) Combo",
+          "quantity": 2,
+          "unit_price": 110.0,
+          "line_total": 220.0,
+          "confidence": 0.98
+        },
+        {
+          "name": "Crispy Onion Rava Dosa",
+          "quantity": 1,
+          "unit_price": 160.0,
+          "line_total": 160.0,
+          "confidence": 0.97
+        },
+        {
+          "name": "Degree Kumbakonam Filter Coffee",
+          "quantity": 4,
+          "unit_price": 45.0,
+          "line_total": 180.0,
+          "confidence": 0.99
+        }
+      ],
+      "subtotal": 840.0,
+      "subtotal_confidence": 0.99,
+      "discount": 0.0,
+      "discount_confidence": 1.0,
+      "tax": 42.0,
+      "tax_confidence": 0.96,
+      "service_charge": 0.0,
+      "service_charge_confidence": 1.0,
+      "printed_total": 882.0,
+      "printed_total_confidence": 0.99
+    }
+  }
+]

@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+{% block title %}Upload Bill — SplitBill{% endblock %}
+{% block content %}
+
+<!-- Step indicator -->
+<div class="steps">
+    <div class="step active"><div class="step-num">1</div> Upload</div>
+    <div class="step-line"></div>
+    <div class="step"><div class="step-num">2</div> Review</div>
+    <div class="step-line"></div>
+    <div class="step"><div class="step-num">3</div> People</div>
+    <div class="step-line"></div>
+    <div class="step"><div class="step-num">4</div> Split</div>
+</div>
+
+<div class="card" style="margin-top:8px;">
+    <div class="card-title"><span class="icon">📸</span> Upload Your Bill Photo</div>
+    <p style="color:var(--text-2);font-size:.9rem;margin-bottom:20px;">
+        Take a photo of any restaurant bill and we'll extract all items, taxes, and totals automatically.
+    </p>
+
+    <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data" id="upload-form">
+        <div class="upload-zone" id="upload-zone">
+            <input type="file" name="bill_image" accept="image/png,image/jpeg,image/jpg,image/svg+xml,image/webp"
+                   required id="file-input" onchange="previewFile(this)">
+            <div id="upload-placeholder">
+                <div class="upload-icon">🖼️</div>
+                <h3>Drop your bill photo here</h3>
+                <p>or click to browse &nbsp;·&nbsp; PNG, JPG, SVG up to 8 MB</p>
+            </div>
+            <div id="upload-preview" style="display:none;">
+                <div style="font-size:2.5rem;margin-bottom:8px;">✅</div>
+                <p id="file-name" style="font-weight:600;color:var(--green);"></p>
+                <p style="font-size:.8rem;color:var(--text-2);margin-top:4px;">Click or drop another file to change</p>
+            </div>
+        </div>
+
+        <div style="margin-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+            <div style="font-size:.84rem;color:var(--text-2);">
+                <span>No bill on hand?</span>
+                <a href="#demo-bills-section" style="color:var(--accent-2);margin-left:6px;text-decoration:underline;">
+                    Pick from 15 Demo Bills below ↓
+                </a>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit-btn">
+                ⚡ Upload &amp; Extract Bill
+            </button>
+        </div>
+    </form>
+
+    <!-- Quick 1-click popular presets bar -->
+    <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--border-soft);">
+        <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--text-3);margin-bottom:10px;">
+            ✨ Quick Start with 1-Click Demo Bills:
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <a href="{{ url_for('demo_load', bill_id='royal_biryani') }}" class="demo-pill">
+                <span>🍛</span> <strong>Royal Biryani</strong> <span style="color:var(--accent-2);">₹1,869</span>
+            </a>
+            <a href="{{ url_for('demo_load', bill_id='bella_italia') }}" class="demo-pill">
+                <span>🍕</span> <strong>Bella Italia</strong> <span style="color:var(--accent-2);">£71.62</span>
+            </a>
+            <a href="{{ url_for('demo_load', bill_id='blue_tokai') }}" class="demo-pill">
+                <span>☕</span> <strong>Blue Tokai Cafe</strong> <span style="color:var(--accent-2);">₹1,554</span>
+            </a>
+            <a href="{{ url_for('demo_load', bill_id='smash_burger') }}" class="demo-pill">
+                <span>🍔</span> <strong>Smash Burger</strong> <span style="color:var(--accent-2);">$51.92</span>
+            </a>
+            <a href="{{ url_for('demo_load', bill_id='tokyo_sushi') }}" class="demo-pill">
+                <span>🍣</span> <strong>Tokyo Sushi</strong> <span style="color:var(--accent-2);">¥9,360</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Demo Bills Showcase Section -->
+<div id="demo-bills-section" style="margin-top:36px;">
+    <div class="demo-section-header">
+        <div>
+            <h2 style="font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:700;color:var(--text-1);margin-bottom:4px;display:flex;align-items:center;gap:8px;">
+                <span>🧾</span> Sample &amp; Demo Bills
+                <span style="font-size:.75rem;padding:2px 8px;border-radius:12px;background:rgba(124,58,237,.2);color:var(--accent-2);border:1px solid rgba(124,58,237,.3);font-family:'Inter',sans-serif;">
+                    15 Presets Ready
+                </span>
+            </h2>
+            <p style="color:var(--text-2);font-size:.85rem;">
+                Don't have a bill photograph? Click <strong>⚡ Load &amp; Split</strong> on any bill to test immediately, or click <strong>📥 Use in Upload</strong> to simulate the photo upload flow.
+            </p>
+        </div>
+    </div>
+
+    <!-- Filter Pills -->
+    <div class="demo-filter-bar">
+        <button type="button" class="demo-filter-btn active" onclick="filterDemoBills('all', this)">All Bills (15)</button>
+        <button type="button" class="demo-filter-btn" onclick="filterDemoBills('Indian', this)">🍛 Indian &amp; Mughlai</button>
+        <button type="button" class="demo-filter-btn" onclick="filterDemoBills('Italian', this)">🍕 Italian &amp; Pizza</button>
+        <button type="button" class="demo-filter-btn" onclick="filterDemoBills('Cafe', this)">☕ Cafe &amp; Brunch</button>
+        <button type="button" class="demo-filter-btn" onclick="filterDemoBills('Burger', this)">🍔 Burgers &amp; Fast Food</button>
+        <button type="button" class="demo-filter-btn" onclick="filterDemoBills('Asian', this)">🍣 Asian &amp; Sushi</button>
+        <button type="button" class="demo-filter-btn" onclick="filterDemoBills('Bar', this)">🍸 Bar &amp; Lounge</button>
+        <button type="button" class="demo-filter-btn" onclick="filterDemoBills('Dessert', this)">🍰 Desserts</button>
+    </div>
+
+    <!-- Bills Grid -->
+    <div class="demo-grid">
+        {% for d in demo_bills %}
+        <div class="demo-card" data-category="{{ d.category }}">
+            <div class="demo-card-thumb-container">
+                <a href="{{ url_for('static', filename='sample_bills/' + d.image_file) }}" target="_blank" title="Click to view full receipt image" style="display:block;width:100%;height:100%;">
+                    <img src="{{ url_for('static', filename='sample_bills/' + d.image_file) }}"
+                         alt="{{ d.title }} receipt" class="demo-card-img" loading="lazy">
+                </a>
+                <span class="demo-card-badge">{{ d.category }}</span>
+                <span class="demo-card-total">{{ d.currency }}{{ "%.2f"|format(d.bill.printed_total) }}</span>
+            </div>
+
+            <div class="demo-card-body">
+                <div class="demo-card-title">
+                    <span>{{ d.icon }}</span>
+                    <span>{{ d.title }}</span>
+                </div>
+                <div class="demo-card-desc">{{ d.description }}</div>
+
+                <div class="demo-card-items-preview">
+                    <strong>{{ d.bill['items']|length }} items:</strong>
+                    {{ d.bill['items']|map(attribute='name')|join(', ') }}
+                </div>
+
+                <div class="demo-card-actions">
+                    <a href="{{ url_for('demo_load', bill_id=d.id) }}" class="btn btn-primary" style="padding:7px 12px;font-size:.82rem;text-align:center;">
+                        ⚡ Load &amp; Split
+                    </a>
+                    <button type="button" class="btn btn-secondary" style="padding:7px 10px;font-size:.82rem;"
+                            onclick="useDemoInUpload('{{ url_for('static', filename='sample_bills/' + d.image_file) }}', '{{ d.image_file }}', event)">
+                        📥 Use in Upload
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- How it works -->
+<div class="card" style="background:rgba(124,58,237,.06);border-color:rgba(124,58,237,.3);margin-top:36px;">
+    <div class="card-title" style="font-size:.95rem;margin-bottom:12px;">
+        <span class="icon">💡</span> How SplitBill Works
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:center;">
+        {% for step in [
+            ('📤','Upload','Photograph of your restaurant bill or pick a demo'),
+            ('🤖','Extract','AI reads items, quantities, prices & taxes'),
+            ('✏️','Review','Correct any mistakes before assigning'),
+            ('💰','Split','Proportional GST & service charge for each person'),
+        ] %}
+        <div>
+            <div style="font-size:1.8rem;margin-bottom:6px;">{{ step[0] }}</div>
+            <div style="font-weight:600;font-size:.85rem;margin-bottom:3px;">{{ step[1] }}</div>
+            <div style="color:var(--text-2);font-size:.75rem;">{{ step[2] }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

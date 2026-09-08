@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="550" viewBox="0 0 350 550">
+    <defs>
+        <filter id="paper-shadow" x="-5%" y="-2%" width="110%" height="106%">
+            <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.25"/>
+        </filter>
+        <pattern id="sawtooth" width="16" height="8" patternUnits="userSpaceOnUse">
+            <polygon points="0,0 8,8 16,0" fill="#1e1b4b"/>
+        </pattern>
+    </defs>
+    
+    <!-- Background Card Frame -->
+    <rect x="15" y="10" width="320" height="530" rx="6" fill="#fffdf9" filter="url(#paper-shadow)"/>
+    
+    <!-- Top jagged tear -->
+    <path d="M 15 14 Q 25 10 35 14 T 55 14 T 75 14 T 95 14 T 115 14 T 135 14 T 155 14 T 175 14 T 195 14 T 215 14 T 235 14 T 255 14 T 275 14 T 295 14 T 315 14 T 335 14" stroke="#e2e8f0" fill="none" stroke-width="1"/>
+    
+    <!-- Receipt Header -->
+    <text x="175" y="48" font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#111827" text-anchor="middle">THE DUGOUT SPORTS LOUNGE</text>
+    <text x="175" y="68" font-family="'Courier New', monospace" font-size="11" fill="#64748b" text-anchor="middle">Official Restaurant Bill Receipt</text>
+    <text x="175" y="84" font-family="'Courier New', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">Table #12 · Guests: 3 · Cashier: System</text>
+    <text x="175" y="98" font-family="'Courier New', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">Date: 26-Oct-2023 20:45</text>
+    
+    <line x1="28" y1="112" x2="322" y2="112" stroke="#111827" stroke-width="1.2"/>
+    <text x="32" y="128" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#1e293b">QTY  ITEM</text>
+    <text x="320" y="128" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#1e293b" text-anchor="end">PRICE</text>
+    <line x1="28" y1="136" x2="322" y2="136" stroke="#cbd5e1" stroke-dasharray="4,4" stroke-width="1"/>
+    
+    <!-- Items -->
+    
+        <text x="32" y="200" font-family="'Courier New', monospace" font-size="12" fill="#2d3748">1x Premium Lager Beer Pit..</text>
+        <text x="320" y="200" font-family="'Courier New', monospace" font-size="12" fill="#2d3748" text-anchor="end">₹1,150.00</text>
+        
+        <text x="32" y="224" font-family="'Courier New', monospace" font-size="12" fill="#2d3748">1x Buffalo Glazed Wings (..</text>
+        <text x="320" y="224" font-family="'Courier New', monospace" font-size="12" fill="#2d3748" text-anchor="end">₹540.00</text>
+        
+        <text x="32" y="248" font-family="'Courier New', monospace" font-size="12" fill="#2d3748">1x Cheesy Bacon Loaded Fr..</text>
+        <text x="320" y="248" font-family="'Courier New', monospace" font-size="12" fill="#2d3748" text-anchor="end">₹380.00</text>
+        
+        <text x="32" y="272" font-family="'Courier New', monospace" font-size="12" fill="#2d3748">1x Crispy Mozzarella Sticks</text>
+        <text x="320" y="272" font-family="'Courier New', monospace" font-size="12" fill="#2d3748" text-anchor="end">₹320.00</text>
+        
+        <text x="32" y="296" font-family="'Courier New', monospace" font-size="12" fill="#2d3748">2x Red Bull Energy Drink</text>
+        <text x="320" y="296" font-family="'Courier New', monospace" font-size="12" fill="#2d3748" text-anchor="end">₹360.00</text>
+        
+    
+    <!-- Totals -->
+    
+    <line x1="28" y1="330" x2="322" y2="330" stroke="#cbd5e1" stroke-dasharray="4,4" stroke-width="1.2"/>
+    <text x="32" y="352" font-family="'Courier New', monospace" font-size="12" fill="#4a5568">Subtotal</text>
+    <text x="320" y="352" font-family="'Courier New', monospace" font-size="12" fill="#4a5568" text-anchor="end">₹2,750.00</text>
+    
+        <text x="32" y="368" font-family="'Courier New', monospace" font-size="12" fill="#4a5568">Tax / GST</text>
+        <text x="320" y="368" font-family="'Courier New', monospace" font-size="12" fill="#4a5568" text-anchor="end">₹275.00</text>
+        
+        <text x="32" y="388" font-family="'Courier New', monospace" font-size="12" fill="#4a5568">Service Charge</text>
+        <text x="320" y="388" font-family="'Courier New', monospace" font-size="12" fill="#4a5568" text-anchor="end">₹200.00</text>
+        
+    
+    
+    <line x1="28" y1="414" x2="322" y2="414" stroke="#1a202c" stroke-width="1.5"/>
+    <text x="32" y="438" font-family="'Courier New', monospace" font-size="15" font-weight="bold" fill="#111827">TOTAL AMOUNT</text>
+    <text x="320" y="438" font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#111827" text-anchor="end">₹3,225.00</text>
+    <line x1="28" y1="448" x2="322" y2="448" stroke="#1a202c" stroke-width="1.5"/>
+    
+    
+    <!-- Footer Note -->
+    <text x="175" y="488" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#475569" text-anchor="middle">THANK YOU! VISIT AGAIN</text>
+    <text x="175" y="504" font-family="'Courier New', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">*** Paid in Full · Card Auth: #94821 ***</text>
+    
+    <!-- Barcode mockup -->
+    <g transform="translate(60, 516)">
+        <rect x="0" y="0" width="3" height="24" fill="#334155"/>
+        <rect x="6" y="0" width="1" height="24" fill="#334155"/>
+        <rect x="10" y="0" width="4" height="24" fill="#334155"/>
+        <rect x="18" y="0" width="2" height="24" fill="#334155"/>
+        <rect x="23" y="0" width="5" height="24" fill="#334155"/>
+        <rect x="32" y="0" width="2" height="24" fill="#334155"/>
+        <rect x="37" y="0" width="1" height="24" fill="#334155"/>
+        <rect x="42" y="0" width="6" height="24" fill="#334155"/>
+        <rect x="52" y="0" width="2" height="24" fill="#334155"/>
+        <rect x="58" y="0" width="4" height="24" fill="#334155"/>
+        <rect x="66" y="0" width="1" height="24" fill="#334155"/>
+        <rect x="70" y="0" width="3" height="24" fill="#334155"/>
+        <rect x="77" y="0" width="5" height="24" fill="#334155"/>
+        <rect x="86" y="0" width="2" height="24" fill="#334155"/>
+        <rect x="92" y="0" width="4" height="24" fill="#334155"/>
+        <rect x="100" y="0" width="1" height="24" fill="#334155"/>
+        <rect x="105" y="0" width="3" height="24" fill="#334155"/>
+        <rect x="112" y="0" width="6" height="24" fill="#334155"/>
+        <rect x="122" y="0" width="2" height="24" fill="#334155"/>
+        <rect x="128" y="0" width="3" height="24" fill="#334155"/>
+        <rect x="135" y="0" width="1" height="24" fill="#334155"/>
+        <rect x="140" y="0" width="5" height="24" fill="#334155"/>
+        <rect x="150" y="0" width="2" height="24" fill="#334155"/>
+        <rect x="156" y="0" width="4" height="24" fill="#334155"/>
+        <rect x="164" y="0" width="1" height="24" fill="#334155"/>
+        <rect x="170" y="0" width="3" height="24" fill="#334155"/>
+        <rect x="176" y="0" width="6" height="24" fill="#334155"/>
+        <rect x="186" y="0" width="2" height="24" fill="#334155"/>
+        <rect x="192" y="0" width="4" height="24" fill="#334155"/>
+        <rect x="200" y="0" width="2" height="24" fill="#334155"/>
+        <rect x="206" y="0" width="5" height="24" fill="#334155"/>
+        <rect x="215" y="0" width="2" height="24" fill="#334155"/>
+        <rect x="220" y="0" width="4" height="24" fill="#334155"/>
+    </g>
+</svg>

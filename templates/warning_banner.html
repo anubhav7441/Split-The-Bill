@@ -1,0 +1,16 @@
+{% if result.total_mismatch %}
+<div class="warning-banner">
+    <strong>⚠ WARNING: Printed total does not match calculated total.</strong>
+    <ul>
+        <li>Calculated Total: ₹{{ result.calculated_total }}</li>
+        <li>Printed Total: ₹{{ result.printed_total }}</li>
+        <li>Difference: ₹{{ result.mismatch_difference | round(2) | abs }}</li>
+    </ul>
+    <p>
+        This usually means an item, discount, tax, or service charge was misread or
+        miscalculated on the original bill. The split below is based on the
+        <strong>calculated</strong> total. Go back to
+        <a href="{{ url_for('review') }}">Review & Edit</a> to correct any values if needed.
+    </p>
+</div>
+{% endif %}

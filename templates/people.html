@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block title %}People & Assign — SplitBill{% endblock %}
+{% block content %}
+
+<div class="steps">
+    <div class="step done"><div class="step-num">✓</div> Upload</div>
+    <div class="step-line"></div>
+    <div class="step done"><div class="step-num">✓</div> Review</div>
+    <div class="step-line"></div>
+    <div class="step active"><div class="step-num">3</div> People</div>
+    <div class="step-line"></div>
+    <div class="step"><div class="step-num">4</div> Split</div>
+</div>
+
+<!-- Add people -->
+<div class="card">
+    <div class="card-title"><span class="icon">👥</span> Who's splitting?</div>
+
+    <div class="add-person-row">
+        <form action="{{ url_for('add_person') }}" method="POST"
+              style="display:flex;gap:10px;width:100%;">
+            <input type="text" name="person_name" placeholder="Enter person's name…" required
+                   style="flex:1;">
+            <button type="submit" class="btn btn-primary">+ Add</button>
+        </form>
+    </div>
+
+    {% if people %}
+    <ul class="people-list">
+        {% for p in people %}
+        <li class="person-item">
+            <div class="person-avatar">{{ p.name[0]|upper }}</div>
+            <span class="person-name">{{ p.name }}</span>
+            <form action="{{ url_for('remove_person') }}" method="POST" style="margin:0;">
+                <input type="hidden" name="person_id" value="{{ p.id }}">
+                <button type="submit" class="btn btn-danger">Remove</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p style="color:var(--text-3);font-size:.9rem;text-align:center;padding:16px 0;">
+        No people yet — add at least one person above.
+    </p>
+    {% endif %}
+</div>
+
+<!-- Assign items -->
+<div class="card">
+    <div class="card-title"><span class="icon">🍽️</span> Assign Items</div>
+
+    {% if not people %}
+    <p style="color:var(--text-2);font-size:.9rem;">
+        Add at least one person above before assigning items.
+    </p>
+    {% else %}
+    <form action="{{ url_for('assign') }}" method="POST" id="assign-form">
+        {% for item in bill['items'] %}
+        {% set idx = loop.index0 %}
+        {% set current = assignments.get(idx|string, []) %}
+        {% set all_ids = people | map(attribute='id') | list %}
+        {% set is_everyone = (current | sort) == (all_ids | sort) and people | length > 0 %}
+
+        <div class="assign-block">
+            <div class="assign-item-name">{{ item.name }}</div>
+            <div class="assign-item-price">₹{{ item.line_total }}</div>
+
+            <div class="assign-mode-row">
+                <label class="radio-label">
+                    <input type="radio" name="mode_{{ idx }}" value="everyone"
+                           id="mode_everyone_{{ idx }}"
+                           onchange="toggleItemPeople({{ idx }}, true)"
+                           {{ 'checked' if is_everyone else '' }}>
+                    <span>🌍 Everyone</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="mode_{{ idx }}" value="individual"
+                           id="mode_individual_{{ idx }}"
+                           onchange="toggleItemPeople({{ idx }}, false)"
+                           {{ 'checked' if not is_everyone else '' }}>
+                    <span>👤 Choose people</span>
+                </label>
+            </div>
+
+            <div id="people-checks-{{ idx }}" class="checkboxes-row">
+                {% for p in people %}
+                <label class="check-label">
+                    <input type="checkbox" name="item_{{ idx }}_people" value="{{ p.id }}"
+                           {{ 'checked' if p.id in current else '' }}
+                           {{ 'disabled' if is_everyone else '' }}>
+                    <span>{{ p.name }}</span>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+
+        <div style="margin-top:16px;">
+            <button type="submit" class="btn btn-primary">💾 Save Assignments</button>
+        </div>
+    </form>
+    {% endif %}
+</div>
+
+<div class="action-bar">
+    <a href="{{ url_for('review') }}" class="btn btn-secondary">← Edit Bill</a>
+    <a href="{{ url_for('calculate') }}" class="btn btn-success">Calculate Split →</a>
+</div>
+
+{% endblock %}

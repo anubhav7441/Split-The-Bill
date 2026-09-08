@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "name": "Chicken Biryani",
+      "quantity": 2,
+      "unit_price": 380.0,
+      "line_total": 760.0,
+      "confidence": 0.98
+    },
+    {
+      "name": "Mutton Korma",
+      "quantity": 1,
+      "unit_price": 450.0,
+      "line_total": 450.0,
+      "confidence": 0.95
+    },
+    {
+      "name": "Garlic Naan",
+      "quantity": 4,
+      "unit_price": 70.0,
+      "line_total": 280.0,
+      "confidence": 0.99
+    },
+    {
+      "name": "Coke (250ml)",
+      "quantity": 3,
+      "unit_price": 45.0,
+      "line_total": 135.0,
+      "confidence": 0.96
+    }
+  ],
+  "subtotal": 1625.0,
+  "subtotal_confidence": 0.98,
+  "discount": 0.0,
+  "discount_confidence": 1.0,
+  "tax": 81.26,
+  "tax_confidence": 0.95,
+  "service_charge": 162.5,
+  "service_charge_confidence": 0.92,
+  "printed_total": 1869.0,
+  "printed_total_confidence": 0.99
+}

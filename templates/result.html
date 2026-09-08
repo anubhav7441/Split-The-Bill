@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block title %}Final Split — SplitBill{% endblock %}
+{% block content %}
+
+<div class="steps">
+    <div class="step done"><div class="step-num">✓</div> Upload</div>
+    <div class="step-line"></div>
+    <div class="step done"><div class="step-num">✓</div> Review</div>
+    <div class="step-line"></div>
+    <div class="step done"><div class="step-num">✓</div> People</div>
+    <div class="step-line"></div>
+    <div class="step active"><div class="step-num">4</div> Split</div>
+</div>
+
+{% include "warning_banner.html" %}
+
+<!-- Summary tiles -->
+<div class="summary-row">
+    <div class="summary-tile">
+        <div class="tile-label">Calculated Total</div>
+        <div class="tile-value">₹{{ result.calculated_total }}</div>
+    </div>
+    <div class="summary-tile">
+        <div class="tile-label">Printed Total</div>
+        <div class="tile-value" style="{{ 'color:var(--red)' if result.total_mismatch else '' }}">
+            ₹{{ result.printed_total }}
+        </div>
+    </div>
+    <div class="summary-tile">
+        <div class="tile-label">People Splitting</div>
+        <div class="tile-value">{{ result.num_people }}</div>
+    </div>
+</div>
+
+<h2 style="font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:16px;">
+    💳 Individual Breakdown
+</h2>
+
+{% for person in result.breakdown %}
+<div class="person-result">
+    <div class="person-result-header">
+        <div class="person-result-avatar">{{ person.name[0]|upper }}</div>
+        <div>
+            <div class="person-result-name">{{ person.name }}</div>
+            <div style="color:var(--text-2);font-size:.8rem;">
+                Pre-tax: ₹{{ person.pre_tax_subtotal }}
+            </div>
+        </div>
+        <div style="margin-left:auto;text-align:right;">
+            <div style="font-size:.72rem;color:var(--text-2);text-transform:uppercase;letter-spacing:.05em;">Owes</div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:700;color:var(--accent-2);">
+                ₹{{ person.final_payable }}
+            </div>
+        </div>
+    </div>
+
+    <div class="person-result-body">
+        {% if person['items'] %}
+        <table class="items-breakdown">
+            {% for it in person['items'] %}
+            <tr>
+                <td>{{ it.name }}</td>
+                <td>₹{{ it.share }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p style="color:var(--text-3);font-size:.85rem;font-style:italic;margin-bottom:10px;">
+            No items assigned.
+        </p>
+        {% endif %}
+
+        <table class="totals-breakdown">
+            <tr>
+                <td style="color:var(--text-2);">Pre-tax subtotal</td>
+                <td>₹{{ person.pre_tax_subtotal }}</td>
+            </tr>
+            {% if person.discount_share > 0 %}
+            <tr>
+                <td style="color:var(--text-2);">Discount</td>
+                <td class="deduct">−₹{{ person.discount_share }}</td>
+            </tr>
+            {% endif %}
+            {% if person.tax_share > 0 %}
+            <tr>
+                <td style="color:var(--text-2);">GST / Tax</td>
+                <td class="add">+₹{{ person.tax_share }}</td>
+            </tr>
+            {% endif %}
+            {% if person.service_share > 0 %}
+            <tr>
+                <td style="color:var(--text-2);">Service charge</td>
+                <td class="add">+₹{{ person.service_share }}</td>
+            </tr>
+            {% endif %}
+            <tr class="final-row">
+                <td><strong>FINAL PAYABLE</strong></td>
+                <td><strong>₹{{ person.final_payable }}</strong></td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endfor %}
+
+<!-- Total check -->
+<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+            padding:14px 20px;margin-top:8px;display:flex;justify-content:space-between;align-items:center;
+            font-size:.875rem;color:var(--text-2);">
+    <span>Total allocated across all people</span>
+    <strong style="color:var(--text-1);font-size:1rem;">
+        ₹{{ result.breakdown | sum(attribute='final_payable') | round(2) }}
+    </strong>
+</div>
+
+<div class="action-bar">
+    <a href="{{ url_for('people') }}" class="btn btn-secondary">← Edit Assignments</a>
+    <a href="{{ url_for('review') }}" class="btn btn-secondary">← Edit Bill</a>
+    <a href="{{ url_for('index') }}" class="btn btn-primary">🔄 New Bill</a>
+</div>
+
+{% endblock %}
